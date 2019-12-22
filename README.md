@@ -27,27 +27,17 @@ This is a [`Maven Archetype`](https://maven.apache.org/guides/introduction/intro
 
 ## Install kubeless-maven-plugin
 
-1. Nagigate to `kubeless-maven-plugin` directory
-   ```
-   cd kubeless-maven-plugin
-   ```
-
-1. Run the command below to install `kubeless-maven-plugin` locally
-   ```
-   mvn clean install
-   ```
+Nagigate to `kubeless-maven-plugin` directory and run the command below to install the plugin locally
+```
+mvn clean install
+```
 
 ## Install archetype locally
 
-1. Navigate to `kubeless-dev-environment-archetype`
-   ```
-   cd ../kubeless-dev-environment-archetype
-   ```
-
-1. Install archetype locally
-   ```
-   mvn clean install
-   ```
+Navigate to `kubeless-dev-environment-archetype` and run the following command to install archetype locally
+```
+mvn clean install
+```
 
 ## Generate application from archetype
 
