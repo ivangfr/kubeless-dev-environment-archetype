@@ -21,7 +21,6 @@
             <artifactId>jvm-runtime</artifactId>
             <version>0.1</version>
         </dependency>
-
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
@@ -36,12 +35,16 @@
                 <groupId>org.ivanfranchin</groupId>
                 <artifactId>kubeless-maven-plugin</artifactId>
                 <version>1.0-SNAPSHOT</version>
+                <configuration>
+                    <inputJavaClassName>AppFunction</inputJavaClassName>
+                    <outputJavaClassName>KAppFunction</outputJavaClassName>
+                </configuration>
                 <executions>
                     <execution>
-                        <configuration>
-                            <inputClassName>AppFunction</inputClassName>
-                            <outputClassName>KAppFunction</outputClassName>
-                        </configuration>
+                        <!-- Just an unique id for the execution -->
+                        <id>kubeless-convert</id>
+                        <!-- kubeless-maven-plugin runs in process-resources phase by default -->
+                        <!-- <phase>process-resources</phase> -->
                         <goals>
                             <goal>convert</goal>
                         </goals>

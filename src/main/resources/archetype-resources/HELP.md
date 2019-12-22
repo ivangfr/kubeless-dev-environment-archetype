@@ -54,6 +54,11 @@ You must have `Kubectl`, `Minikube` and `Kubeless CLI` installed in your machine
    kubeless function logs greeting-java
    ```
 
+1. Check the function `configmaps` (source code can be seeing here)
+   ```
+   kubectl describe configmaps greeting-java
+   ```
+
 1. Delete function
    ```
    kubeless function delete greeting-java

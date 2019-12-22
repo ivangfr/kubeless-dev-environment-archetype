@@ -1,18 +1,53 @@
 # kubeless-dev-environment-archetype
 
-This is a [`Maven Archetype`](https://maven.apache.org/guides/introduction/introduction-to-archetypes.html) used for development of [`Kubeless`](https://kubeless.io/) functions
+This is a [`Maven Archetype`](https://maven.apache.org/guides/introduction/introduction-to-archetypes.html) used for development of [`Kubeless`](https://kubeless.io/) Functions
 
 ## Prerequisites
 
-- You must have a recent version of [`Apache Maven`](https://maven.apache.org/) installed in your machine.
+- You must have a recent version of [`Apache Maven`](https://maven.apache.org/) and [`JDK 1.8`](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) or later installed in your machine.
+
+## Clone repos
+
+1. Clone `kubeless-maven-plugin` project
+   ```
+   git clone https://github.com/ivangfr/kubeless-maven-plugin.git
+   ```
+
+1. At the same level as `kubeless-dev-environment`, clone `kubeless-dev-environment-archetype`
+   ```
+   git clone https://github.com/ivangfr/kubeless-dev-environment-archetype.git
+   ```
+
+1. This should be the final directory structure
+   ```
+   .
+   ├── kubeless-dev-environment-archetype
+   ├── kubeless-maven-plugin
+   ```
+
+## Install kubeless-maven-plugin
+
+1. Nagigate to `kubeless-maven-plugin` directory
+   ```
+   cd kubeless-maven-plugin
+   ```
+
+1. Run the command below to install `kubeless-maven-plugin` locally
+   ```
+   mvn clean install
+   ```
 
 ## Install archetype locally
 
-```
-git clone https://github.com/ivangfr/kubeless-dev-environment-archetype.git
-cd kubeless-dev-environment-archetype
-mvn clean install
-```
+1. Navigate to `kubeless-dev-environment-archetype`
+   ```
+   cd ../kubeless-dev-environment-archetype
+   ```
+
+1. Install archetype locally
+   ```
+   mvn clean install
+   ```
 
 ## Generate application from archetype
 
