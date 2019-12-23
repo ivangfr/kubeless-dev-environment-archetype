@@ -61,6 +61,39 @@ There are two ways:
       -Dpackage=com.mycompany.myapp
   ```
 
+The structure of a project with groupId `com.mycompany`, package `com.mycompany.myapp` and artifactId `myapp`, should look like:
+```
+myapp
+├── .mvn
+│   └── wrapper
+│       ├── MavenWrapperDownloader.java
+│       ├── maven-wrapper.jar
+│       └── maven-wrapper.properties
+├── HELP.md
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+└── src
+    ├── main
+    │   └── java
+    │       ├── com
+    │       │   └── mycompany
+    │       │       └── myapp
+    │       │           └── App.java
+    │       └── io
+    │           └── kubeless
+    │               └── AppFunction.java
+    └── test
+        └── java
+            ├── com
+            │   └── mycompany
+            │       └── myapp
+            │           └── AppTest.java
+            └── io
+                └── kubeless
+                    └── AppFunctionTest.java
+```
+
 ## Maven Wrapper
 
 The `Maven Wrapper` files, `mvnw` (Linux and Mac) and `mvnw.cmd` (Windows), are inside the generated application directory.
